@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="DynTextureAtlasSample" package="com.emibap.DynTextureAtlasSample" version="1.0.0" company="emibap" />
+	<app main="Startup" path="Export" file="DynTextureAtlasSample" />
+	
+	<source path="Source" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="swf" />
+	<haxelib name="starling" />
+
+	<library path="Assets/sample_for_atlas.swc" preload="true" generate="true" />
+
+	<assets path="Assets" rename="assets" exclude="*.swc" />
+	
+</project>
