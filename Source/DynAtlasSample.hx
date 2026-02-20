@@ -78,8 +78,7 @@ class DynAtlasSample extends Sprite {
 
 			DynamicAtlas.bitmapFontFromString(chars2Add, embeddedFont1.fontName, 16, false, false, -2);
 			DynamicAtlas.bitmapFontFromString(chars2Add, "_sans", 16, false, false, -2);
-			// Don't use bitmapFontFromTextField, it won't work
-			DynamicAtlas.bitmapFontFromString("ABCDEFGHIJKLMNOPQRSTUVWXYZ", embeddedFont2.fontName, 20, false, false, 0);
+			DynamicAtlas.bitmapFontFromTextField(cont.tf, 0);
 
 			var textFmt:TextFormat = new TextFormat(embeddedFont1.fontName, 16, 0xFF0000);
 			textFmt.bold = true;
@@ -100,7 +99,7 @@ class DynAtlasSample extends Sprite {
 			addChild(system_tf);
 
 			var textFmt3:TextFormat = new TextFormat(embeddedFont2.fontName, 16, 0x00FF00);
-			var filtered_tf:TextField = new TextField(300, 100, "AND ONE HELLUVA (UN)FILTERED TEXT", textFmt3);
+			var filtered_tf:TextField = new TextField(300, 100, "AND ONE HELLUVA FILTERED TEXT", textFmt3);
 			// the native bitmap font size, no scaling
 			textFmt3.size = BitmapFont.NATIVE_SIZE;
 			// use white to use the texture as it is (no tInting)
