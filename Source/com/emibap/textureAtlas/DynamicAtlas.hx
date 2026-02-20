@@ -590,7 +590,6 @@ class DynamicAtlas {
 
 		texture = Texture.fromBitmapData(canvasData);
 		// TextField.registerBitmapFont(new BitmapFont(texture, xml));
-		trace([fontFamily, fontCustomID]);
 		TextField.registerCompositor(new BitmapFont(texture, xml.x), (fontCustomID == "") ? fontFamily : fontCustomID);
 
 		_items.resize(0);
