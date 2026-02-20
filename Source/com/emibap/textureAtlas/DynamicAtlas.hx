@@ -395,7 +395,7 @@ class DynamicAtlas {
 					cast(selected, MovieClip).gotoAndStop(0);
 					frameBounds = getRealBounds(selected);
 					m = 1;
-					while (++m <= selectedTotalFrames) {
+					while (++m <= cast selectedTotalFrames) {
 						cast(selected, MovieClip).gotoAndStop(m);
 						frameBounds = frameBounds.union(getRealBounds(selected));
 					}
@@ -406,7 +406,7 @@ class DynamicAtlas {
 				selectedTotalFrames = 1;
 			m = 0;
 			// Draw every frame (if MC - else will just be one)
-			while (++m <= selectedTotalFrames) {
+			while (++m <= cast selectedTotalFrames) {
 				if (Std.isOfType(selected, MovieClip))
 					cast(selected, MovieClip).gotoAndStop(m);
 				drawItem(selected, selected.name + "_" + appendIntToString(m - 1, 5), selected.name, selectedColorTransform, frameBounds);
@@ -590,6 +590,7 @@ class DynamicAtlas {
 
 		texture = Texture.fromBitmapData(canvasData);
 		// TextField.registerBitmapFont(new BitmapFont(texture, xml));
+		trace([fontFamily, fontCustomID]);
 		TextField.registerCompositor(new BitmapFont(texture, xml.x), (fontCustomID == "") ? fontFamily : fontCustomID);
 
 		_items.resize(0);

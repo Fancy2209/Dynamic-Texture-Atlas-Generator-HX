@@ -10,7 +10,8 @@
 	<haxelib name="swf" />
 	<haxelib name="starling" />
 
-	<library path="Assets/sample_for_atlas.swc" preload="true" generate="true" />
+	<haxeflag name="-swf-lib" value="Assets/sample_for_atlas.swc" if="flash" />
+	<library path="Assets/sample_for_atlas.swc" preload="true" generate="true" unless="flash" />
 
 	<assets path="Assets" rename="assets" exclude="*.swc" />
 	
